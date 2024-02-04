@@ -6,7 +6,7 @@ import { useSearch } from '../context/search'
 function Home() {
   const [auto,setAuto]=useState([])
   const getAuto=async()=>{
-    const {data}=await axios('http://localhost:5000/auto/get-auto')
+    const {data}=await axios('https://auto-virid-delta.vercel.app/auto/get-auto')
     setAuto(data.auto)
   }
   useEffect(()=>{
@@ -25,7 +25,7 @@ function Home() {
                         <p>{a.color}</p>
                         <p>{a.registerNumber}</p>
                         <p>{a.location}</p>
-                        <img src={`http://localhost:5000/auto/get-photo/${a._id}`}
+                        <img src={`https://auto-virid-delta.vercel.app/auto/get-photo/${a._id}`}
                         style={{height:'150px',width:'180px'}} alt="no photo" />
                       </div>
                       <div className="card-body">

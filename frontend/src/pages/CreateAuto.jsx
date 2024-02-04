@@ -19,7 +19,7 @@ function CreateAuto() {
     formData.append('photo',photo)
 
     try{
-      const {data}=await axios.post('http://localhost:5000/auto/create',formData)
+      const {data}=await axios.post('https://auto-virid-delta.vercel.app/auto/create',formData)
       if(data.success){
         setName('')
         setLocation('')
